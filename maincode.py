@@ -5,6 +5,7 @@ import tkinter as tk
 import sqlite3
 from tkcalendar import Calendar
 
+
 # DATABASE SECTION
 crc = sqlite3.connect("student_info.db")
 crc.execute('''CREATE TABLE IF NOT EXISTS student_data(
@@ -30,6 +31,7 @@ def show_data():
             e.grid(row=i, column=j)
             e.insert(END, student[j])
         i = i+1
+
 
 # UI SECTION
 def label_data():
